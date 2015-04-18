@@ -5,6 +5,83 @@ using LeetCode.LongestSubstringWithoutRepeatingCharacters;
 using LeetCode.MedianOfTwoSortedArrays;
 using LeetCode.LongestPalindromicSubstring;
 using LeetCode.ZigZagConversion;
+using LeetCode.ReverseInteger;
+using LeetCode.StringToInteger;
+using LeetCode.PalindromeNumber;
+using LeetCode.RegularExpressionMatching;
+namespace LeetCode.RegularExpressionMatching.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void IsMatchTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(false, sol.IsMatch("aa", "a"));
+            Assert.AreEqual(true, sol.IsMatch("aa", "aa"));
+            Assert.AreEqual(false, sol.IsMatch("aaa", "aa"));
+            Assert.AreEqual(true, sol.IsMatch("aa", "a*"));
+            Assert.AreEqual(true, sol.IsMatch("aa", ".*"));
+            Assert.AreEqual(true, sol.IsMatch("ab", ".*"));
+            Assert.AreEqual(true, sol.IsMatch("aab", "c*a*b"));
+        }
+    }
+}
+
+namespace LeetCode.PalindromeNumber.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void IsPalindromeTest()
+        {
+            var sol = new Solution();
+            Assert.False(sol.IsPalindrome(Int32.MaxValue));
+            Assert.False(sol.IsPalindrome(Int32.MinValue));
+            Assert.True(sol.IsPalindrome(Solution.MaxPalindromeNumber));
+            Assert.False(sol.IsPalindrome(1000000003));
+        }
+    }
+}
+
+namespace LeetCode.StringToInteger.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void MyAtoiTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(0, sol.MyAtoi(""));
+            Assert.AreEqual(-12, sol.MyAtoi("  -0012a42"));
+            Assert.AreEqual(0, sol.MyAtoi("+-2"));
+            Assert.AreEqual(2147483647, sol.MyAtoi("2147483648"));
+            Assert.AreEqual(0, sol.MyAtoi("   - 321"));
+            Assert.AreEqual(2147483647, sol.MyAtoi("9223372036854775809"));
+        }
+    }
+}
+
+namespace LeetCode.ReverseInteger.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void ReverseTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(321, sol.Reverse(123));
+            Assert.AreEqual(-321, sol.Reverse(-123));
+            Assert.AreEqual(0, sol.Reverse(1000000003));
+            Assert.AreEqual(1, sol.Reverse(10));
+        }
+    }
+}
+
 namespace LeetCode.ZigZagConversion.Tests
 {
     [TestFixture()]
