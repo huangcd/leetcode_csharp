@@ -40,13 +40,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTwoNumber.cs" />
+    <Compile Include="ContainerWithMostWater.cs" />
+    <Compile Include="IntegerToRoman.cs" />
     <Compile Include="ListNode.cs" />
+    <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="LongestPalindromicSubstring.cs" />
     <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
     <Compile Include="MedianOfTwoSortedArrays.cs" />
     <Compile Include="PalindromeNumber.cs" />
     <Compile Include="RegularExpressionMatching.cs" />
     <Compile Include="ReverseInteger.cs" />
+    <Compile Include="RomanToInteger.cs" />
     <Compile Include="StringToInteger.cs" />
     <Compile Include="TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

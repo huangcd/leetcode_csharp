@@ -1,20 +1,71 @@
 ﻿using System;
 using System.Linq;
 using NUnit.Framework;
-using LeetCode.LongestSubstringWithoutRepeatingCharacters;
-using LeetCode.MedianOfTwoSortedArrays;
-using LeetCode.LongestPalindromicSubstring;
-using LeetCode.ZigZagConversion;
-using LeetCode.ReverseInteger;
-using LeetCode.StringToInteger;
-using LeetCode.PalindromeNumber;
-using LeetCode.RegularExpressionMatching;
-namespace LeetCode.RegularExpressionMatching.Tests
+using LeetCode.IntegerToRoman;
+using LeetCode.LongestCommonPrefix;
+namespace LeetCode.LongestCommonPrefix.Tests
 {
     [TestFixture()]
     public class SolutionTests
     {
         [Test()]
+        public void LongestCommonPrefixTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(String.Empty, sol.LongestCommonPrefix(null));
+            Assert.AreEqual(String.Empty, sol.LongestCommonPrefix(new string[0]));
+            Assert.AreEqual(String.Empty, sol.LongestCommonPrefix(new[] { null, "Hello world" }));
+            Assert.AreEqual(String.Empty, sol.LongestCommonPrefix(new[] { "", "Hello world" }));
+            Assert.AreEqual(String.Empty, sol.LongestCommonPrefix(new[] { "AC", "Hello world" }));
+            Assert.AreEqual("He", sol.LongestCommonPrefix(new[] { "He", "Hello world" }));
+            Assert.AreEqual("He", sol.LongestCommonPrefix(new[] { "He's a good boy", "Hello world" }));
+        }
+    }
+}
+
+namespace LeetCode.IntegerToRoman.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void IntToRomanTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual("IV", sol.IntToRoman(4));
+        }
+    }
+}
+
+namespace LeetCode.ContainerWithMostWater.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void MaxAreaTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(1, sol.MaxArea(new[] { 1, 1 }));
+            Assert.AreEqual(25, sol.MaxArea(new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }));
+            Assert.AreEqual(25, sol.MaxArea(new[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }));
+            Assert.AreEqual(25, sol.MaxArea(new[] { 1, 2, 3, 4, 5, 10, 9, 8, 7, 6 }));
+            Assert.AreEqual(49, sol.MaxArea(new[] { 3, 1, 7, 9, 5, 10, 2, 6, 4, 8 }));
+            Assert.AreEqual(72, sol.MaxArea(new[] { 9, 1, 7, 9, 10, 5, 2, 6, 4, 8 }));
+
+            Assert.AreEqual(56250000, sol.MaxArea(Enumerable.Range(1, 15000).ToArray()));
+
+            Assert.AreEqual(56250000, sol.MaxArea(Enumerable.Range(1, 15000).Reverse().ToArray()));
+        }
+    }
+}
+
+namespace LeetCode.RegularExpressionMatching.Tests
+{
+    [TestFixture]
+    public class SolutionTests
+    {
+        [Test]
         public void IsMatchTest()
         {
             var sol = new Solution();
@@ -31,10 +82,10 @@ namespace LeetCode.RegularExpressionMatching.Tests
 
 namespace LeetCode.PalindromeNumber.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class SolutionTests
     {
-        [Test()]
+        [Test]
         public void IsPalindromeTest()
         {
             var sol = new Solution();
@@ -48,10 +99,10 @@ namespace LeetCode.PalindromeNumber.Tests
 
 namespace LeetCode.StringToInteger.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class SolutionTests
     {
-        [Test()]
+        [Test]
         public void MyAtoiTest()
         {
             var sol = new Solution();
@@ -67,10 +118,10 @@ namespace LeetCode.StringToInteger.Tests
 
 namespace LeetCode.ReverseInteger.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class SolutionTests
     {
-        [Test()]
+        [Test]
         public void ReverseTest()
         {
             var sol = new Solution();
@@ -84,10 +135,10 @@ namespace LeetCode.ReverseInteger.Tests
 
 namespace LeetCode.ZigZagConversion.Tests
 {
-    [TestFixture()]
+    [TestFixture]
     public class SolutionTests
     {
-        [Test()]
+        [Test]
         public void ConvertTest()
         {
             var sol = new Solution();
