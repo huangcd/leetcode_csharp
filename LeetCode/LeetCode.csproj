@@ -52,6 +52,8 @@
     <Compile Include="ReverseInteger.cs" />
     <Compile Include="RomanToInteger.cs" />
     <Compile Include="StringToInteger.cs" />
+    <Compile Include="ThreeSum.cs" />
+    <Compile Include="ThreeSumClosest.cs" />
     <Compile Include="TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZigZagConversion.cs" />

@@ -3,6 +3,68 @@ using System.Linq;
 using NUnit.Framework;
 using LeetCode.IntegerToRoman;
 using LeetCode.LongestCommonPrefix;
+using LeetCode.ThreeSum;
+using System.Collections.Generic;
+using System.Collections;
+
+namespace LeetCode
+{
+    public static class TestExtension
+    {
+        public static String Join<T>(
+            this IEnumerable<T> enumerable,
+            string separator = ",")
+        {
+            return String.Join(separator, enumerable.Select(e => e.ToString()));
+        }
+
+        public static String Join<T, K>(
+            this IEnumerable<T> enumerable,
+            string separator = ",",
+            string open = "{",
+            string close = "}") where T : IEnumerable<K>
+        {
+            return String.Join(separator, enumerable.Select(e => open + e.Join(separator) + close));
+        }
+    }
+}
+
+namespace LeetCode.ThreeSumClosest.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void ThreeSumClosestTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(2, sol.ThreeSumClosest(new[] { -1, 2, 1, -4 }, 1));
+            Assert.AreEqual(3, sol.ThreeSumClosest(new[] { 0, 1, 2 }, 3));
+            Assert.AreEqual(0, sol.ThreeSumClosest(new[] { 0, 0, 0 }, 3));
+            Assert.AreEqual(1, sol.ThreeSumClosest(new[] { 1, 1, -1 }, 2));
+        }
+    }
+}
+
+namespace LeetCode.ThreeSum.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void ThreeSumTest()
+        {
+            var sol = new Solution();
+            var expect = new List<IList<int>> { new[] { -1, -1, 2 }, new[] { -1, 0, 1 }, };
+            var actual = sol.ThreeSum(new [] { -1, 0, 1, 2, -1, -4 });
+            Assert.AreEqual(expect.Join<IList<int>, int>(), actual.Join<IList<int>, int>());
+            expect = new List<IList<int>>();
+            actual = sol.ThreeSum(new [] {1,2,3,4});
+            Assert.AreEqual(expect.Join<IList<int>, int>(), actual.Join<IList<int>, int>());
+        }
+    }
+}
+
 namespace LeetCode.LongestCommonPrefix.Tests
 {
     [TestFixture()]
