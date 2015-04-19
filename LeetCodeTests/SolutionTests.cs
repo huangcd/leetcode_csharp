@@ -6,6 +6,126 @@ using LeetCode.LongestCommonPrefix;
 using LeetCode.ThreeSum;
 using System.Collections.Generic;
 using System.Collections;
+using LeetCode.LetterCombinationsOfAPhoneNumber;
+using LeetCode.FourSum;
+using LeetCode.RemoveNthNodeFromEndOfList;
+using LeetCode.ValidParentheses;
+using LeetCode.MergeTwoSoretedLists;
+using LeetCode.GenerateParentheses;
+using LeetCode.ReverseNodesInKGroup;
+namespace LeetCode.ReverseNodesInKGroup.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void ReverseKGroupTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(53412, sol.ReverseKGroup(54321, 2));
+            Assert.AreEqual(54123, sol.ReverseKGroup(54321, 3));
+        }
+    }
+}
+
+namespace LeetCode.GenerateParentheses.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void GenerateParenthesisTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(new[] { "((()))", "(()())", "(())()", "()(())", "()()()" },
+                sol.GenerateParenthesis(3));
+        }
+    }
+}
+
+namespace LeetCode.MergeTwoSoretedLists.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void MergeTwoListsTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(54321, sol.MergeTwoLists(531, 42));
+            Assert.AreEqual(54321, sol.MergeTwoLists(54321, null));
+            Assert.AreEqual(54321, sol.MergeTwoLists(null, 54321));
+        }
+    }
+}
+
+namespace LeetCode.ValidParentheses.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void IsValidTest()
+        {
+            var sol = new Solution();
+            Assert.IsTrue(sol.IsValid("()"));
+            Assert.IsTrue(sol.IsValid("()[]{}"));
+            Assert.IsTrue(sol.IsValid("()[({})]{}"));
+            Assert.IsFalse(sol.IsValid("()[({(})]{}"));
+            Assert.IsFalse(sol.IsValid("([)]"));
+            Assert.IsFalse(sol.IsValid("(["));
+            Assert.IsFalse(sol.IsValid("([]"));
+            Assert.IsFalse(sol.IsValid("(){[]"));
+        }
+    }
+}
+
+namespace LeetCode.RemoveNthNodeFromEndOfList.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void RemoveNthFromEndTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(5321, sol.RemoveNthFromEnd(54321, 2));
+            Assert.AreEqual(4321, sol.RemoveNthFromEnd(54321, 1));
+        }
+    }
+}
+
+namespace LeetCode.FourSum.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void FourSumTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(new[] { new[] { -2, -1, 1, 2 }, new[] { -2, 0, 0, 2 }, new[] { -1, 0, 0, 1 }, },
+                sol.FourSum(new[] { 1, 0, -1, 0, -2, 2 }, 0));
+        }
+    }
+}
+
+namespace LeetCode.LetterCombinationsOfAPhoneNumber.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void LetterCombinationsTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(new[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" },
+                sol.LetterCombinations("23"));
+            Assert.AreEqual(new[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" },
+                sol.LetterCombinations("23"));
+        }
+    }
+}
 
 namespace LeetCode
 {
@@ -56,10 +176,10 @@ namespace LeetCode.ThreeSum.Tests
         {
             var sol = new Solution();
             var expect = new List<IList<int>> { new[] { -1, -1, 2 }, new[] { -1, 0, 1 }, };
-            var actual = sol.ThreeSum(new [] { -1, 0, 1, 2, -1, -4 });
+            var actual = sol.ThreeSum(new[] { -1, 0, 1, 2, -1, -4 });
             Assert.AreEqual(expect.Join<IList<int>, int>(), actual.Join<IList<int>, int>());
             expect = new List<IList<int>>();
-            actual = sol.ThreeSum(new [] {1,2,3,4});
+            actual = sol.ThreeSum(new[] { 1, 2, 3, 4 });
             Assert.AreEqual(expect.Join<IList<int>, int>(), actual.Join<IList<int>, int>());
         }
     }
