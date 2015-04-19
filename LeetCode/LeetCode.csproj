@@ -41,8 +41,10 @@
   <ItemGroup>
     <Compile Include="AddTwoNumber.cs" />
     <Compile Include="ContainerWithMostWater.cs" />
+    <Compile Include="DivideTwoIntegers.cs" />
     <Compile Include="FourSum.cs" />
     <Compile Include="GenerateParentheses.cs" />
+    <Compile Include="ImplementStrStr.cs" />
     <Compile Include="IntegerToRoman.cs" />
     <Compile Include="LetterCombinationsOfAPhoneNumber.cs" />
     <Compile Include="ListNode.cs" />
@@ -52,16 +54,20 @@
     <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
     <Compile Include="MedianOfTwoSortedArrays.cs" />
     <Compile Include="MergeTwoSoretedLists.cs" />
+    <Compile Include="NumberOf1Bits.cs" />
     <Compile Include="PalindromeNumber.cs" />
     <Compile Include="RegularExpressionMatching.cs" />
     <Compile Include="RemoveNthNodeFromEndOfList.cs" />
+    <Compile Include="ReverseBits.cs" />
     <Compile Include="ReverseInteger.cs" />
     <Compile Include="ReverseNodesInKGroup.cs" />
     <Compile Include="RomanToInteger.cs" />
+    <Compile Include="RotateArray.cs" />
     <Compile Include="StringToInteger.cs" />
     <Compile Include="SwapNodeInPairs.cs" />
     <Compile Include="ThreeSum.cs" />
     <Compile Include="ThreeSumClosest.cs" />
+    <Compile Include="TreeNode.cs" />
     <Compile Include="TwoSum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidParentheses.cs" />

@@ -2,6 +2,116 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using LeetCode.NumberOf1Bits;
+using LeetCode.RotateArray;
+using LeetCode.ReverseBits;
+namespace LeetCode.ReverseBits.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void reverseBitsTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(964176192u, sol.reverseBits(43261596u));
+            Assert.AreEqual(43261596u, sol.reverseBits(964176192u));
+        }
+    }
+}
+
+namespace LeetCode.RotateArray.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void RotateTest()
+        {
+            var sol = new Solution();
+            var actual = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            sol.Rotate(actual, 3);
+            Assert.AreEqual(new[] { 5, 6, 7, 1, 2, 3, 4 }, actual);
+
+            actual = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            sol.Rotate(actual, 1);
+            Assert.AreEqual(new[] { 7, 1, 2, 3, 4, 5, 6 }, actual);
+
+            actual = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            sol.Rotate(actual, 0);
+            Assert.AreEqual(new[] { 1, 2, 3, 4, 5, 6, 7 }, actual);
+        }
+
+        [Test()]
+        public void GreatestCommonDivisorTest()
+        {
+            Assert.AreEqual(2, Solution.GreatestCommonDivisor(12, 14));
+            Assert.AreEqual(2, Solution.GreatestCommonDivisor(12, 22));
+            Assert.AreEqual(4, Solution.GreatestCommonDivisor(12, 16));
+            Assert.AreEqual(3, Solution.GreatestCommonDivisor(12, 15));
+            Assert.AreEqual(1, Solution.GreatestCommonDivisor(12, 17));
+            Assert.AreEqual(1, Solution.GreatestCommonDivisor(12, 35));
+        }
+    }
+}
+
+namespace LeetCode.NumberOf1Bits.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void HammingWeightTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(3, sol.HammingWeight(11));
+        }
+    }
+}
+
+namespace LeetCode.DivideTwoIntegers.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        // [Timeout(100)]
+        public void DivideTest()
+        {
+            var sol = new Solution();
+            var random = new Random();
+            Assert.AreEqual(Int32.MaxValue, sol.Divide(1, 0));
+            Assert.AreEqual(Int32.MaxValue, sol.Divide(Int32.MaxValue, 0));
+            Assert.AreEqual(0, sol.Divide(0, Int32.MaxValue));
+            Assert.AreEqual(-1, sol.Divide(Int32.MinValue, Int32.MaxValue));
+            Assert.AreEqual(-2, sol.Divide(Int32.MinValue, Int32.MaxValue / 2));
+            Assert.AreEqual(-1, sol.Divide(1, -1));
+            for (var i = 0; i < 10; i++)
+            {
+                var dividend = random.Next() * (random.Next(2) == 0 ? -1 : 1);
+                var divisor = random.Next() * (random.Next(2) == 0 ? -1 : 1);
+                Assert.AreEqual(dividend / divisor, sol.Divide(dividend, divisor), "Expect: {0} / {1} = {2}", dividend, divisor, dividend / divisor);
+            }
+        }
+    }
+}
+
+namespace LeetCode.ImplementStrStr.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void StrStrTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(0, sol.StrStr("Hello World", "Hello"));
+            Assert.AreEqual(6, sol.StrStr("Hello World ", "World"));
+            Assert.AreEqual(6, sol.StrStr("Hello World", "World"));
+            Assert.AreEqual(-1, sol.StrStr("Hello World", "World!"));
+        }
+    }
+}
 
 namespace LeetCode.ReverseNodesInKGroup.Tests
 {
