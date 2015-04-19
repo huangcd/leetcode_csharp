@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode.RegularExpressionMatching
+﻿namespace LeetCode.RegularExpressionMatching
 {
     using System.Text.RegularExpressions;
+
     public class Solution
     {
         public bool IsMatch(string s, string p)

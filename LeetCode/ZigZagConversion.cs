@@ -16,7 +16,7 @@ namespace LeetCode.ZigZagConversion
             // first row
             for (int i = 0, skip = (n - 1) * 2; i < s.Length; i += skip)
             {
-                buffer[index ++] = s[i];
+                buffer[index++] = s[i];
             }
             // middle rows
             for (int r = 1; r < n - 1; r++)

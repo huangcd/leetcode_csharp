@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode.MergeTwoSoretedLists
+﻿namespace LeetCode.MergeTwoSoretedLists
 {
     public class Solution
     {
@@ -29,7 +23,6 @@ namespace LeetCode.MergeTwoSoretedLists
                     p.next = l1;
                     p = l1;
                     l1 = l1.next;
-                    
                 }
                 else
                 {

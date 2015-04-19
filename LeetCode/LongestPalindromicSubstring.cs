@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace LeetCode.LongestPalindromicSubstring
+﻿namespace LeetCode.LongestPalindromicSubstring
 {
     public class Solution
     {
@@ -32,7 +29,6 @@ namespace LeetCode.LongestPalindromicSubstring
                     maxLength = length;
                     maxStart = backExclusive + 1;
                 }
-
 
                 backExclusive = i + 1;
                 forwardExclusive = i;

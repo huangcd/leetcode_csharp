@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class ListNode
     {

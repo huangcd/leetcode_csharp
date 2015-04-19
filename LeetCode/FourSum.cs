@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode.FourSum
 {
@@ -26,11 +23,11 @@ namespace LeetCode.FourSum
                     }
                     for (int k = j + 1, maxK = num.Length - 1; k < maxK; k++)
                     {
-                        if (k > j + 1 && num[k] == num[k- 1])
+                        if (k > j + 1 && num[k] == num[k - 1])
                         {
                             continue;
                         }
-                        var val = target-(num[i] + num[j] + num[k]);
+                        var val = target - (num[i] + num[j] + num[k]);
                         var index = Array.BinarySearch(num, k + 1, num.Length - k - 1, val);
                         if (index > 0)
                         {

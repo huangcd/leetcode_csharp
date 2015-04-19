@@ -6,7 +6,7 @@ namespace LeetCode.ContainerWithMostWater
 {
     public class Solution
     {
-        struct Item
+        private struct Item
         {
             public int Index;
             public int Height;

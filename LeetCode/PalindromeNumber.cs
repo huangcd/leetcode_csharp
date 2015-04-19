@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode.PalindromeNumber
 {
     public class Solution
     {
         public const int MaxPalindromeNumber = 2147447412;
+
         public bool IsPalindrome(int x)
         {
             if (x == Int32.MinValue)

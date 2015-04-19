@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode.MedianOfTwoSortedArrays
 {
@@ -110,7 +107,7 @@ namespace LeetCode.MedianOfTwoSortedArrays
                     }
                 }
 
-                var mid = k/2;
+                var mid = k / 2;
                 var lenA = a.Length;
                 if (lenA <= mid)
                 {
