@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using LeetCode.ReverseNodesInKGroup;
+using NUnit.Framework;
 
 namespace LeetCode.Tests
 {
@@ -14,6 +15,9 @@ namespace LeetCode.Tests
             int rightVal = right;
             Assert.AreEqual(324, leftVal);
             Assert.AreEqual(465, rightVal);
+            Assert.AreEqual(12345, ((ListNode)54321).Reverse());
+            Assert.AreEqual(1, ((ListNode)1).Reverse());
+            Assert.AreEqual(null, ((ListNode)null).Reverse());
         }
     }
 }

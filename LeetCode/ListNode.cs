@@ -1,6 +1,9 @@
-﻿namespace LeetCode
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace LeetCode
 {
-    public class ListNode
+    public class ListNode : IEnumerable<int>
     {
         public int val;
         public ListNode next;
@@ -19,11 +22,9 @@
         public static implicit operator int(ListNode node)
         {
             var result = 0;
-            var pow = 1;
             while (node != null)
             {
-                result += pow * node.val;
-                pow *= 10;
+                result = result * 10 + node.val;
                 node = node.next;
             }
             return result;
@@ -31,15 +32,30 @@
 
         public static implicit operator ListNode(int value)
         {
-            var head = new ListNode(-1);
-            var p = head;
+            var vHead = new ListNode(-1);
             while (value != 0)
             {
-                p.next = new ListNode(value % 10);
+                var p = new ListNode(value % 10) { next = vHead.next };
+                vHead.next = p;
                 value /= 10;
-                p = p.next;
             }
-            return head.next;
+
+            return vHead.next;
+        }
+
+        public IEnumerator<int> GetEnumerator()
+        {
+            var p = this;
+            do
+            {
+                yield return p.val;
+                p = p.next;
+            } while (p.next != null);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }

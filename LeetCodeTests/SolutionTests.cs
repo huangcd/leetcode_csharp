@@ -12,8 +12,8 @@ namespace LeetCode.ReverseNodesInKGroup.Tests
         public void ReverseKGroupTest()
         {
             var sol = new Solution();
-            Assert.AreEqual(53412, sol.ReverseKGroup(54321, 2));
-            Assert.AreEqual(54123, sol.ReverseKGroup(54321, 3));
+            Assert.AreEqual(21435, sol.ReverseKGroup(12345, 2));
+            Assert.AreEqual(32145, sol.ReverseKGroup(12345, 3));
         }
     }
 }
@@ -42,9 +42,9 @@ namespace LeetCode.MergeTwoSoretedLists.Tests
         public void MergeTwoListsTest()
         {
             var sol = new Solution();
-            Assert.AreEqual(54321, sol.MergeTwoLists(531, 42));
-            Assert.AreEqual(54321, sol.MergeTwoLists(54321, null));
-            Assert.AreEqual(54321, sol.MergeTwoLists(null, 54321));
+            Assert.AreEqual(12345, sol.MergeTwoLists(135, 24));
+            Assert.AreEqual(12345, sol.MergeTwoLists(12345, null));
+            Assert.AreEqual(12345, sol.MergeTwoLists(null, 12345));
         }
     }
 }
@@ -79,8 +79,8 @@ namespace LeetCode.RemoveNthNodeFromEndOfList.Tests
         public void RemoveNthFromEndTest()
         {
             var sol = new Solution();
-            Assert.AreEqual(5321, sol.RemoveNthFromEnd(54321, 2));
-            Assert.AreEqual(4321, sol.RemoveNthFromEnd(54321, 1));
+            Assert.AreEqual(1235, sol.RemoveNthFromEnd(12345, 2));
+            Assert.AreEqual(1234, sol.RemoveNthFromEnd(12345, 1));
         }
     }
 }
@@ -409,9 +409,10 @@ namespace LeetCode.AddTwoNumber.Tests
         public void AddTwoNumbersTest()
         {
             var solution = new Solution();
-            Assert.AreEqual(807, solution.AddTwoNumbers(342, 465));
-            Assert.AreEqual(100000000, solution.AddTwoNumbers(99999999, 1));
-            Assert.AreEqual(100000000, solution.AddTwoNumbers(1, 99999999));
+            Assert.AreEqual(708, solution.AddTwoNumbers(243, 564));
+            Assert.AreEqual(1, solution.AddTwoNumbers(99999999, 1));
+            Assert.AreEqual(1, solution.AddTwoNumbers(1, 99999999));
+            Assert.AreEqual(11111111, solution.AddTwoNumbers(11111111, 99999999));
         }
     }
 }
