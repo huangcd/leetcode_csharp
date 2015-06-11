@@ -2,9 +2,70 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using LeetCode.NumberOf1Bits;
-using LeetCode.RotateArray;
-using LeetCode.ReverseBits;
+using LeetCode.HouseRobber;
+using LeetCode.ExcelSheetColumnTitle;
+namespace LeetCode.ExcelSheetColumnTitle.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void ConvertToTitleTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual("AB", sol.ConvertToTitle(28));
+        }
+    }
+}
+
+namespace LeetCode.HouseRobber.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void RobTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(2, sol.Rob(new[] { 1, 1, 1 }));
+        }
+    }
+}
+
+namespace LeetCode.RemoveLinkedListElements.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void RemoveElementsTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(12345, sol.RemoveElements(1236456, 6));
+            Assert.AreEqual(null, sol.RemoveElements(666666, 6));
+            Assert.AreEqual(12345, sol.RemoveElements(1236456, 6));
+            Assert.AreEqual(12345, sol.RemoveElements(123456, 6));
+            Assert.AreEqual(12345, sol.RemoveElements(612345, 6));
+        }
+    }
+}
+
+namespace LeetCode.HappyNumber.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void IsHappyTest()
+        {
+            var sol = new Solution();
+            Assert.IsTrue(sol.IsHappy(19));
+            Assert.IsTrue(sol.IsHappy(1));
+            Assert.IsFalse(sol.IsHappy(2));
+        }
+    }
+}
+
 namespace LeetCode.ReverseBits.Tests
 {
     [TestFixture()]

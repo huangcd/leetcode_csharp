@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace LeetCode
@@ -28,6 +29,11 @@ namespace LeetCode
                 node = node.next;
             }
             return result;
+        }
+
+        public override string ToString()
+        {
+            return String.Join(", ", GetEnumerator());
         }
 
         public static implicit operator ListNode(int value)
