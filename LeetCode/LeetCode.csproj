@@ -47,6 +47,9 @@
     <Compile Include="BinarySearchTreeIterator.cs" />
     <Compile Include="BinaryTreeRightSideView.cs" />
     <Compile Include="ContainerWithMostWater.cs" />
+    <Compile Include="ContainsDuplicate.cs" />
+    <Compile Include="ContainsDuplicateII.cs" />
+    <Compile Include="CountPrimes.cs" />
     <Compile Include="DivideTwoIntegers.cs" />
     <Compile Include="ExcelSheetColumnTitle.cs" />
     <Compile Include="FourSum.cs" />
@@ -55,6 +58,9 @@
     <Compile Include="HouseRobber.cs" />
     <Compile Include="ImplementStrStr.cs" />
     <Compile Include="IntegerToRoman.cs" />
+    <Compile Include="Interval.cs" />
+    <Compile Include="InvertBinaryTree.cs" />
+    <Compile Include="IsomorphicStrings.cs" />
     <Compile Include="LetterCombinationsOfAPhoneNumber.cs" />
     <Compile Include="ListNode.cs" />
     <Compile Include="ListNodeExts.cs" />
@@ -62,9 +68,11 @@
     <Compile Include="LongestPalindromicSubstring.cs" />
     <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
     <Compile Include="MedianOfTwoSortedArrays.cs" />
+    <Compile Include="MergeIntervals.cs" />
     <Compile Include="MergeTwoSoretedLists.cs" />
     <Compile Include="NumberOf1Bits.cs" />
     <Compile Include="PalindromeNumber.cs" />
+    <Compile Include="PowerOfTwo.cs" />
     <Compile Include="RegularExpressionMatching.cs" />
     <Compile Include="RemoveLinkedListElements.cs" />
     <Compile Include="RemoveNthNodeFromEndOfList.cs" />

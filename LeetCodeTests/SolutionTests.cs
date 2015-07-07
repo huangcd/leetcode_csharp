@@ -2,8 +2,70 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using LeetCode.HouseRobber;
-using LeetCode.ExcelSheetColumnTitle;
+
+namespace LeetCode.MergeIntervals.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void MergeTest()
+        {
+            var sol = new Solution();
+            
+        }
+    }
+}
+
+namespace LeetCode.CountPrimes.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void CountPrimesTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(0, sol.CountPrimes(2));
+            Assert.AreEqual(1, sol.CountPrimes(3));
+            Assert.AreEqual(2, sol.CountPrimes(4));
+            Assert.AreEqual(2, sol.CountPrimes(5));
+            Assert.AreEqual(3, sol.CountPrimes(6));
+        }
+    }
+}
+
+namespace LeetCode.ContainsDuplicateII.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void ContainsNearbyDuplicateTest()
+        {
+            var sol = new Solution();
+            Assert.IsFalse(sol.ContainsNearbyDuplicate(new[] { 1, 2, 1 }, 1));
+        }
+    }
+}
+
+namespace LeetCode.IsomorphicStrings.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void IsIsomorphicTest()
+        {
+            var sol = new Solution();
+            Assert.IsTrue(sol.IsIsomorphic("pee", "lee"));
+            Assert.IsTrue(sol.IsIsomorphic("add", "egg"));
+            Assert.IsFalse(sol.IsIsomorphic("foo", "bar"));
+            Assert.IsTrue(sol.IsIsomorphic("paper", "title"));
+        }
+    }
+}
+
 namespace LeetCode.ExcelSheetColumnTitle.Tests
 {
     [TestFixture()]
