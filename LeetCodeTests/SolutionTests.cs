@@ -2,6 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
+using LeetCode.SummaryRanges;
+namespace LeetCode.SummaryRanges.Tests
+{
+    [TestFixture()]
+    public class SolutionTests
+    {
+        [Test()]
+        public void SummaryRangesTest()
+        {
+            var sol = new Solution();
+            Assert.AreEqual(new List<String> { "0->2", "4->5", "7" }, sol.SummaryRanges(new[] { 0, 1, 2, 4, 5, 7 }));
+        }
+    }
+}
 
 namespace LeetCode.MergeIntervals.Tests
 {
@@ -12,7 +26,8 @@ namespace LeetCode.MergeIntervals.Tests
         public void MergeTest()
         {
             var sol = new Solution();
-            
+            Assert.AreEqual(new[] { new Interval(1, 5) }, sol.Merge(new[] { new Interval(1, 5), new Interval(1, 4) }));
+            Assert.AreEqual(new[] { new Interval(1, 6) }, sol.Merge(new[] { new Interval(1, 6), new Interval(2, 3), new Interval(4, 5), }));
         }
     }
 }
