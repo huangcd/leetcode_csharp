@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTwoNumber.cs" />
+    <Compile Include="Anagrams.cs" />
     <Compile Include="BinarySearchTreeIterator.cs" />
     <Compile Include="BinaryTreeRightSideView.cs" />
     <Compile Include="ContainerWithMostWater.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="LongestCommonPrefix.cs" />
     <Compile Include="LongestPalindromicSubstring.cs" />
     <Compile Include="LongestSubstringWithoutRepeatingCharacters.cs" />
+    <Compile Include="LowestCommonAncestor.cs" />
     <Compile Include="MedianOfTwoSortedArrays.cs" />
     <Compile Include="MergeIntervals.cs" />
     <Compile Include="MergeTwoSoretedLists.cs" />

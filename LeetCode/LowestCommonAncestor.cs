@@ -1,4 +1,6 @@
-﻿namespace LeetCode.LowestCommonAncestor
+﻿using System;
+
+namespace LeetCode.LowestCommonAncestor
 {
     public class Solution
     {
@@ -12,6 +14,7 @@
             {
                 return p;
             }
+            throw new NotImplementedException();
         }
     }
 }

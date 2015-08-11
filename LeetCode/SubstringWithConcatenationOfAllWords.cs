@@ -28,6 +28,7 @@ namespace LeetCode.SubstringWithConcatenationOfAllWords
             {
                 Array.Clear(contains, 0, size);
             }
+            throw new NotImplementedException();
         }
     }
 
